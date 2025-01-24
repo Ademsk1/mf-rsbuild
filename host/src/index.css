@@ -1,3 +1,8 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Keep existing CSS if any */
 * {
   margin: 0;
   padding: 0;

@@ -9,14 +9,7 @@ const Button: React.FC<ButtonProps> = ({ children, onClick }) => {
   return (
     <button 
       onClick={onClick}
-      style={{
-        padding: '10px 20px',
-        backgroundColor: '#007bff',
-        color: 'white',
-        border: 'none',
-        borderRadius: '4px',
-        cursor: 'pointer'
-      }}
+      className="px-5 py-2.5 bg-emerald-600 text-white rounded-md hover:bg-emerald-700 transition-colors font-semibold shadow-sm hover:shadow-md active:bg-emerald-800"
     >
       {children}
     </button>

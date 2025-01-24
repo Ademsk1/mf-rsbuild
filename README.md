@@ -1,4 +1,3 @@
-
 # Module Federation Demo with Rsbuild
 
 This project demonstrates Module Federation using Rsbuild with a host application and a provider application.
@@ -67,3 +66,4 @@ Docker URLs:
 - Module Federation
 - React Router for navigation
 - Nginx serving production builds
+- Tailwind CSS for styling

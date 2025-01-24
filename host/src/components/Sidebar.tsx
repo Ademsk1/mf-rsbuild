@@ -7,41 +7,26 @@ const Sidebar = () => {
   const isActive = (path: string) => location.pathname === path;
 
   return (
-    <aside style={{
-      width: '200px',
-      minHeight: '100vh',
-      backgroundColor: '#f8f9fa',
-      padding: '20px',
-      borderRight: '1px solid #dee2e6',
-      position: 'fixed',
-      left: 0,
-      top: 0,
-      bottom: 0,
-      overflowY: 'auto'
-    }}>
-      <h2 style={{ marginBottom: '20px' }}>Navigation</h2>
-      <nav style={{ display: 'flex', flexDirection: 'column', gap: '10px' }}>
+    <aside className="w-[200px] min-h-screen bg-gray-50 p-5 border-r border-gray-200 fixed left-0 top-0 bottom-0 overflow-y-auto">
+      <h2 className="text-xl font-bold mb-5">Navigation</h2>
+      <nav className="flex flex-col gap-3">
         <Link 
           to="/home" 
-          style={{
-            padding: '10px',
-            textDecoration: 'none',
-            color: isActive('/home') ? '#007bff' : '#333',
-            backgroundColor: isActive('/home') ? '#e9ecef' : 'transparent',
-            borderRadius: '4px'
-          }}
+          className={`p-3 rounded-md transition-colors ${
+            isActive('/home') 
+              ? 'bg-blue-50 text-blue-600' 
+              : 'text-gray-700 hover:bg-gray-100'
+          }`}
         >
           Home
         </Link>
         <Link 
           to="/contact"
-          style={{
-            padding: '10px',
-            textDecoration: 'none',
-            color: isActive('/contact') ? '#007bff' : '#333',
-            backgroundColor: isActive('/contact') ? '#e9ecef' : 'transparent',
-            borderRadius: '4px'
-          }}
+          className={`p-3 rounded-md transition-colors ${
+            isActive('/contact') 
+              ? 'bg-blue-50 text-blue-600' 
+              : 'text-gray-700 hover:bg-gray-100'
+          }`}
         >
           Contact
         </Link>
