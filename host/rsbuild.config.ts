@@ -1,8 +1,6 @@
 import { defineConfig } from '@rsbuild/core';
 import { pluginReact } from '@rsbuild/plugin-react';
 
-const PROVIDER = process.env.PROVIDER || 'provider';
-const PROVIDER_PORT = PROVIDER === 'provider' ? '3001' : '3002';
 
 export default defineConfig({
   plugins: [pluginReact()],
@@ -18,7 +16,7 @@ export default defineConfig({
     options: {
       name: 'host',
       remotes: {
-        provider: `provider@http://localhost:${PROVIDER_PORT}/remoteEntry.js`,
+        provider: `provider@http://localhost:3001/remoteEntry.js`,
       },
       shared: {
         react: { 

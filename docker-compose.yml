@@ -9,26 +9,14 @@ services:
     networks:
       - mf-network
 
-  provider2:
-    build:
-      context: ./provider2
-      dockerfile: Dockerfile
-    ports:
-      - "3002:3002"
-    networks:
-      - mf-network
-
   host:
     build:
       context: ./host
       dockerfile: Dockerfile
     ports:
       - "3000:3000"
-    environment:
-      - PROVIDER=${PROVIDER:-provider}
     depends_on:
       - provider
-      - provider2
     networks:
       - mf-network
 
